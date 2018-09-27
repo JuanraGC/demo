@@ -26,4 +26,30 @@ public class Country {
 	private List<Province> province = new ArrayList<>();
 	
 	private Integer numProvincias;
+
+	public Integer getIdCountry() {
+		return idCountry;
+	}
+
+	public void setIdCountry(Integer idCountry) {
+		this.idCountry = idCountry;
+	}
+
+	public List<Province> getProvince() {
+		return province;
+	}
+
+	public void setProvince(List<Province> province) {
+		this.province = province;
+	}
+
+	public Integer getNumProvincias() {
+		return numProvincias;
+	}
+
+	public void setNumProvincias(Integer numProvincias) {
+		this.numProvincias = numProvincias;
+	}
+	
+	
 }

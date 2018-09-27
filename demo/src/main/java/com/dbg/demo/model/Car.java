@@ -1,6 +1,7 @@
 package com.dbg.demo.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +21,7 @@ public class Car {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer idCar;
 
-	@ManyToOne
+	@ManyToOne (fetch = FetchType.LAZY)
 	private User user;
 	
 	private Integer idCity;
@@ -48,6 +49,14 @@ public class Car {
 
 	public void setModel(String model) {
 		this.model = model;
+	}
+
+	public Integer getIdCity() {
+		return idCity;
+	}
+
+	public void setIdCity(Integer idCity) {
+		this.idCity = idCity;
 	}
 
 }

@@ -30,4 +30,12 @@ public class Province {
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "province")
 	private List<City> cities = new ArrayList<>();
+
+	public Integer getNumCitizens() {
+		return numCitizens;
+	}
+
+	public void setNumCitizens(Integer numCitizens) {
+		this.numCitizens = numCitizens;
+	}
 }
